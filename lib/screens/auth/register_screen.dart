@@ -1,31 +1,19 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class RegisterScreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _RegisterScreenState createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _verificationCodeController =
-      TextEditingController(); // 新增验证码控制器
 
-  void _login() {
-// 这里可以添加登录逻辑
+  void _Register() {
+    // 这里可以添加登录逻辑
     String username = _usernameController.text;
     String password = _passwordController.text;
-    String verificationCode = _verificationCodeController.text; // 获取验证码输入
-    print('用户名: $username, 密码: $password, 验证码: $verificationCode');
-// 验证验证码逻辑
-    if (verificationCode == '123456') {
-      // 假设验证码是 '123456'
-      print('验证码正确');
-// 继续登录逻辑
-    } else {
-      print('验证码错误');
-// 显示错误信息给用户
-    }
+    print('用户名: $username, 密码: $password');
   }
 
   @override
@@ -56,18 +44,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               obscureText: true,
             ),
-            SizedBox(height: 16.0), // 增加间距
-            TextField(
-              // 新增验证码输入框
-              controller: _verificationCodeController,
-              decoration: InputDecoration(
-                labelText: '验证码',
-                border: OutlineInputBorder(),
-              ),
-            ),
             SizedBox(height: 24.0),
             ElevatedButton(
-              onPressed: _login,
+              onPressed: _Register,
               child: Text('登录'),
             ),
           ],
