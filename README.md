@@ -1,4 +1,4 @@
-# supcoder
+# supcoder-admin-flutter
 
 Supcoder Management System.
 
