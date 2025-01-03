@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary ?? Colors.blue,
+        backgroundColor: Colors.white ,
         title: Text(widget.title),
       ),
       body: IndexedStack(
@@ -66,9 +66,12 @@ class _HomeScreenState extends State<HomeScreen> {
         children: _pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        unselectedItemColor: Theme.of(context).colorScheme.outline,
+        selectedItemColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: Colors.white, // 设置背景颜色
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
-        backgroundColor: Theme.of(context).colorScheme.primary, // 设置背景颜色
         items: List.generate(_tabLabels.length, (index) {
           return BottomNavigationBarItem(
             icon: Icon(_tabIcons[index]),
