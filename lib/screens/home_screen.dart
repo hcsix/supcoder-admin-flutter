@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:supcoder/screens/role/role_manage_screen.dart';
 import 'package:supcoder/screens/user/user_manage_screen.dart';
 
-import 'auth/login_screen.dart';
 import 'index/index_screen.dart';
 import 'mine/mine_screen.dart';
 

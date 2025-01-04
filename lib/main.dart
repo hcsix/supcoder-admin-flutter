@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:supcoder/screens/auth/login_screen.dart';
 import 'package:supcoder/screens/home_screen.dart';
+import 'package:supcoder/screens/mine/about_screen.dart';
 import 'package:supcoder/theme/theme.dart';
 
 void main() {
@@ -16,7 +18,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
-      home: const HomeScreen(title: 'SUP CODER'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(title: 'SUP CODER'),
+        '/login': (context) => LoginScreen(),
+        '/about': (context) => AboutScreen(),
+      },
     );
   }
 }
