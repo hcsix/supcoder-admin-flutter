@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supcoder/screens/auth/login_screen.dart';
+import 'package:supcoder/screens/test/test_screen.dart';
 
 class AuthStateView extends StatelessWidget {
   final bool isLoggedIn;
@@ -15,7 +16,8 @@ class AuthStateView extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => LoginScreen()),
+                // MaterialPageRoute(builder: (context) => LoginScreen()),
+                MaterialPageRoute(builder: (context) => TestScreen( title: "title")),
               );
             },
             child: Text('登录'),
