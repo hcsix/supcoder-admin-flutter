@@ -167,8 +167,8 @@ class AuthProvider with ChangeNotifier {
     serverUrl = extractedUserData['serverUrl'];
 
     log('autologin successful');
-    setApplicationVersion();
-    setServerVersion();
+    // setApplicationVersion();
+    // setServerVersion();
     notifyListeners();
     //_autoLogout();
     return true;
